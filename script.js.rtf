@@ -1,6 +1,32 @@
-// Contact form popup (for now)
-document.getElementById('contactForm').addEventListener('submit', function(e) {
-  e.preventDefault();
-  alert('Thank you for contacting FairStart!');
-  this.reset();
+// Mobile nav toggle (accessible)
+const toggle = document.querySelector('.nav-toggle');
+const nav = document.querySelector('.primary-nav');
+toggle?.addEventListener('click', () => {
+  const open = toggle.getAttribute('aria-expanded') === 'true';
+  toggle.setAttribute('aria-expanded', String(!open));
+  nav.classList.toggle('show');
 });
+
+// Smooth scroll for same-page links
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const id = a.getAttribute('href');
+    const el = document.querySelector(id);
+    if (el) {
+      e.preventDefault();
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      nav.classList.remove('show');
+      toggle.setAttribute('aria-expanded','false');
+    }
+  });
+});
+
+// Simple contact handler (replace later with Formspree/Netlify Forms)
+document.getElementById('contactForm')?.addEventListener('submit', e => {
+  e.preventDefault();
+  alert('Thanks! We’ll get back to you soon.');
+  e.target.reset();
+});
+
+// Current year in footer
+document.getElementById('year').textContent = new Date().getFullYear();
