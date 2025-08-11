@@ -1,91 +1,216 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>FairStart: Rethinking Youth Sports</title>
+  <!-- SEO & Meta -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FairStart — Rethinking Youth Sports</title>
+  <meta name="description" content="FairStart aims to replace the outdated chronological age model in youth sports with evidence-based, equitable systems." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Clean, pro typography -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
+  <!-- Social sharing -->
+  <meta property="og:title" content="FairStart — Rethinking Youth Sports" />
+  <meta property="og:description" content="Evidence-based alternatives to the Little League chronological age model." />
+  <meta property="og:type" content="website" />
 </head>
 <body>
-  <!-- HEADER -->
-  <header>
-    <div class="nav-container">
-      <h1 class="logo">FairStart</h1>
-      <nav>
-        <ul class="nav-links">
-          <li><a href="#mission">Mission</a></li>
-          <li><a href="#strategy">Strategy</a></li>
-          <li><a href="#solutions">Solutions</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
+  <!-- Header / Sticky Nav -->
+  <header class="site-header" id="top">
+    <div class="container nav">
+      <a class="logo" href="#top" aria-label="FairStart Home">
+        <svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3 12a9 9 0 1 1 18 0a9 9 0 0 1-18 0Zm9-7a7 7 0 1 0 0 14a7 7 0 0 0 0-14Zm-1.2 9.7l5-5a1 1 0 1 1 1.4 1.4l-5.7 5.7a1 1 0 0 1-1.4 0L7.8 12.3a1 1 0 0 1 1.4-1.4l1.6 1.6Z"/></svg>
+        <span>FairStart</span>
+      </a>
+
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="primary-nav" aria-label="Primary">
+        <a href="#mission">Mission</a>
+        <a href="#strategy">Strategy</a>
+        <a href="#solutions">Solutions</a>
+        <a href="#contact" class="btn btn--sm">Contact</a>
       </nav>
     </div>
   </header>
 
-  <!-- HERO SECTION -->
-  <section id="hero">
-    <div class="hero-overlay">
-      <div class="hero-text">
-        <h2>It's Time for a Fair Start</h2>
-        <p>Replacing outdated age models in youth sports with evidence-based fairness.</p>
+  <!-- Hero -->
+  <section class="hero">
+    <picture>
+      <!-- big, crisp background image -->
+      <img
+        src="https://images.unsplash.com/photo-1526679497032-b6730b796dce?q=80&w=2400&auto=format&fit=crop"
+        alt=""
+        class="hero__bg"
+        loading="eager"
+        fetchpriority="high"
+      />
+    </picture>
+    <div class="container hero__content">
+      <h1>It’s Time for a Fair Start</h1>
+      <p class="lead">
+        Replace the chronological age model with evidence‑based, equitable systems that put development first.
+      </p>
+      <div class="hero__cta">
         <a href="#mission" class="btn">Learn More</a>
+        <a href="#contact" class="btn btn--ghost">Collaborate</a>
       </div>
     </div>
   </section>
 
-  <!-- MISSION -->
-  <section id="mission">
-    <div class="container">
-      <h2>Mission</h2>
-      <p>To modernize youth sports through fairness, development, and credibility — by replacing the Little League chronological age model with progressive, ability-based alternatives.</p>
-    </div>
-  </section>
-
-  <!-- STRATEGY -->
-  <section id="strategy" class="section-alt">
-    <div class="container">
-      <h2>Strategy</h2>
-      <div class="grid">
-        <div class="card"><h3>📚 Publish Research</h3><p>Partner with academics to co-author papers backed by original data and findings.</p></div>
-        <div class="card"><h3>🏟️ Pilot Program</h3><p>Demonstrate success through real-world implementations in local programs.</p></div>
-        <div class="card"><h3>📖 Write the Book</h3><p>Document the theory, journey, and steps to reform in an accessible format.</p></div>
-        <div class="card"><h3>📱 Social Media</h3><p>Build awareness through content, testimonials, and clear calls to action.</p></div>
+  <!-- Social Proof -->
+  <section class="proof">
+    <div class="container proof__row">
+      <p class="proof__title">As seen in / partnered with</p>
+      <div class="proof__logos" aria-label="Partner logos">
+        <!-- placeholder SVG “logos” you can replace with real PNG/SVG files -->
+        <span class="logo-pill">Univ. Partner</span>
+        <span class="logo-pill">Youth Org</span>
+        <span class="logo-pill">Local Rec</span>
+        <span class="logo-pill">Research Lab</span>
       </div>
     </div>
   </section>
 
-  <!-- SOLUTIONS -->
-  <section id="solutions">
-    <div class="container">
-      <h2>Solutions for Parents</h2>
-      <div class="grid">
-        <div class="card"><h3>Turn-Key Systems</h3><p>Toolkits for leagues to transition to ability-based formats.</p></div>
-        <div class="card"><h3>DIY Scheduling</h3><p>Parents can create personalized skill-based activity schedules.</p></div>
-        <div class="card"><h3>Educational Media</h3><p>Short videos, articles, and resources explaining why change is needed.</p></div>
+  <!-- Mission -->
+  <section id="mission" class="section">
+    <div class="container grid grid--2">
+      <div>
+        <h2>Mission</h2>
+        <p>
+          To modernize youth sports through fairness, development, and credibility—replacing the Little League chronological age model with progressive, ability‑aligned alternatives.
+        </p>
+        <ul class="checklist">
+          <li>Evidence‑based frameworks</li>
+          <li>Accessible implementation playbooks</li>
+          <li>Benefits for kids, parents, coaches, and leagues</li>
+        </ul>
+      </div>
+      <div>
+        <img class="rounded shadow" src="https://images.unsplash.com/photo-1521417531670-ee1c2f0188ab?q=80&w=1600&auto=format&fit=crop"
+             alt="Young athletes training together" loading="lazy">
       </div>
     </div>
   </section>
 
-  <!-- CONTACT -->
-  <section id="contact" class="section-alt">
+  <!-- Strategy (Cards) -->
+  <section id="strategy" class="section section--alt">
     <div class="container">
-      <h2>Get in Touch</h2>
-      <form id="contactForm">
-        <input type="text" placeholder="Your Name" required />
-        <input type="email" placeholder="Your Email" required />
-        <textarea placeholder="Your Message" required></textarea>
+      <h2 class="center">Four‑Prong Strategy</h2>
+      <div class="grid grid--4 cards">
+        <article class="card">
+          <h3>📚 Co‑Author Research</h3>
+          <p>Leverage original data with academic partners to publish peer‑reviewed work and build credibility.</p>
+        </article>
+        <article class="card">
+          <h3>🏟️ Pilot Programs</h3>
+          <p>Design & run pilots with Parks/Rec & leagues to prove outcomes and refine the model.</p>
+        </article>
+        <article class="card">
+          <h3>📖 The Book</h3>
+          <p>Explain the problem, show the solution, and provide an implementation toolkit for stakeholders.</p>
+        </article>
+        <article class="card">
+          <h3>📱 Social & Media</h3>
+          <p>Educate parents/providers with short videos, explainers, and practical guides.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Solutions -->
+  <section id="solutions" class="section">
+    <div class="container">
+      <h2 class="center">Solutions for Parents & Providers</h2>
+
+      <div class="grid grid--3 cards">
+        <article class="card card--with-img">
+          <img src="https://images.unsplash.com/photo-1500462918059-b1a0cb512f1d?q=80&w=1200&auto=format&fit=crop"
+               alt="Coach with clipboard" loading="lazy">
+          <div class="card__body">
+            <h3>Turn‑Key System</h3>
+            <p>League transition toolkits: age‑band alternatives, session design, fairness metrics, and comms templates.</p>
+            <a href="#contact" class="btn btn--soft">Request Pilot</a>
+          </div>
+        </article>
+
+        <article class="card card--with-img">
+          <img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1200&auto=format&fit=crop"
+               alt="Parent scheduling activities" loading="lazy">
+          <div class="card__body">
+            <h3>DIY Scheduling</h3>
+            <p>Parents bypass rigid leagues with a simple planner: choose activities by skill, not birthdate.</p>
+            <a href="#contact" class="btn btn--soft">Get the Planner</a>
+          </div>
+        </article>
+
+        <article class="card card--with-img">
+          <img src="https://images.unsplash.com/photo-1512428559087-560fa5ceab42?q=80&w=1200&auto=format&fit=crop"
+               alt="Educational video content" loading="lazy">
+          <div class="card__body">
+            <h3>Educational Media</h3>
+            <p>Articles, 2‑min videos, and downloads that explain why change matters and how to start today.</p>
+            <a href="#contact" class="btn btn--soft">View Resources</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="cta">
+    <div class="container cta__row">
+      <h2>Want to collaborate on research or pilots?</h2>
+      <a href="#contact" class="btn btn--light">Contact Us</a>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section section--alt">
+    <div class="container grid grid--2">
+      <div>
+        <h2>Get in Touch</h2>
+        <p>Academics, Parks & Rec, youth orgs, parents—let’s talk. We can share data, frameworks, and a rollout plan.</p>
+        <ul class="list">
+          <li>Co‑authoring opportunities</li>
+          <li>Pilot program design</li>
+          <li>Speaking & media</li>
+        </ul>
+      </div>
+      <form id="contactForm" class="form" autocomplete="on">
+        <label>
+          <span>Name</span>
+          <input name="name" type="text" placeholder="Your Name" required />
+        </label>
+        <label>
+          <span>Email</span>
+          <input name="email" type="email" placeholder="you@email.com" required />
+        </label>
+        <label>
+          <span>Message</span>
+          <textarea name="message" placeholder="How can we help?" rows="5" required></textarea>
+        </label>
         <button type="submit" class="btn">Send Message</button>
+        <p class="form__note">We’ll reply within 2 business days.</p>
       </form>
     </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer>
-    <div class="container footer-container">
-      <p>© 2025 FairStart Initiative</p>
-      <div class="social-icons">
-        <a href="#"><img src="twitter-icon.svg" alt="Twitter" /></a>
-        <a href="#"><img src="linkedin-icon.svg" alt="LinkedIn" /></a>
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer__row">
+      <p>© <span id="year"></span> FairStart Initiative</p>
+      <div class="social">
+        <a aria-label="X / Twitter" href="#" rel="noopener">
+          <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m13.2 10.6 6.5-7.6h-1.5l-5.6 6.6L7.7 3H3l7 9.1L3 21h1.5l6-7.1l5.1 7.1H21l-7.8-10.4Z"/></svg>
+        </a>
+        <a aria-label="LinkedIn" href="#" rel="noopener">
+          <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.94 6.5A1.94 1.94 0 1 1 5 4.56A1.94 1.94 0 0 1 6.94 6.5ZM4.75 8.5h4.38V20H4.75Zm6.78 0h4.2v1.57h.06a4.61 4.61 0 0 1 4.15-2.28c4.44 0 5.26 2.92 5.26 6.72V20h-4.38v-5.11c0-1.22 0-2.8-1.71-2.8s-1.97 1.34-1.97 2.72V20h-4.41Z"/></svg>
+        </a>
       </div>
     </div>
   </footer>
@@ -93,6 +218,4 @@
   <script src="script.js"></script>
 </body>
 </html>
-
-
 
